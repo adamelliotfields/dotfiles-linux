@@ -21,7 +21,7 @@ export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain --paging=alwa
 # Other stuff
 VISUAL="$(which code)"
 export VISUAL="${VISUAL} --wait"
-export EDITOR='/usr/bin/nano'
+export EDITOR='/usr/bin/vim'
 export GIT_EDITOR="$EDITOR"
 export PAGER='/usr/bin/less -RFX --tabs=2'
 
