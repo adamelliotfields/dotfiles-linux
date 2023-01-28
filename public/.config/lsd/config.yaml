@@ -1,0 +1,23 @@
+color:
+  when: always
+
+# show `n units ago` instead of a timestamp
+date: relative
+
+# terminal hyperlinks don't work in Codespaces
+hyperlink: never
+
+# prefer not in Codespace terminal
+icons:
+  when: never
+
+# 0755 instead of rwxr-xr-x
+permission: octal
+
+# show the shortest possible unit
+# eg, 1K instead of 1024B
+size: short
+
+# shows dirs first like in a code editor
+sorting:
+  dir-grouping: first

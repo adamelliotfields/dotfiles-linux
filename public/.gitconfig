@@ -1,0 +1,36 @@
+# put anything else in ~/.gitconfig.inc
+[include]
+  path = .gitconfig.inc
+[core]
+  autocrlf = input
+  editor = nano
+  pager = delta --navigate --hyperlinks --file-style=white --file-decoration-style='white box' --hunk-header-style=omit
+  untrackedcache = true
+  fsmonitor = false # don't enable this in a container
+[interactive]
+  diffFilter = delta --color-only
+[color]
+  ui = always
+[init]
+  defaultBranch = main
+[push]
+  default = simple
+[pull]
+  rebase = false
+[diff]
+  tool = vscode
+  colorMoved = default
+[difftool]
+  prompt = false
+  trustExitCode = true
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+  conflictStyle = diff3
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE $BASE $MERGED
+  trustExitCode = true

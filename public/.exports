@@ -1,0 +1,29 @@
+# shellcheck shell=sh
+# XDG Base Directory Specification
+# https://wiki.archlinux.org/title/XDG_Base_Directory
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-${HOME}/.cache}"
+export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+
+# Deno
+# https://deno.land/manual/getting_started/setup_your_environment#environment-variables
+export DENO_INSTALL_ROOT="${HOME}/.deno"
+export DENO_DIR="${XDG_CACHE_HOME}/deno"
+
+# NVM
+# NVM_DIR is set in ~/.zshrc and ~/.bashrc
+export NVM_SYMLINK_CURRENT=true
+
+# Bat-man pages
+export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain --paging=always'"
+
+# Other stuff
+VISUAL="$(which code)"
+export VISUAL="${VISUAL} --wait"
+export EDITOR='/usr/bin/nano'
+export GIT_EDITOR="$EDITOR"
+export PAGER='/usr/bin/less -RFX --tabs=2'
+
+# PATH
+export PATH="${DENO_INSTALL_ROOT}/bin:${PATH}"
