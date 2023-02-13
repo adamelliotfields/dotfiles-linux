@@ -1,5 +1,5 @@
 {
-  "deno.config": "./deno.jsonc",
+  "deno.config": "./deno.json",
   "deno.enable": true,
   "deno.importMap": "./import_map.json",
   "editor.defaultFormatter": "denoland.vscode-deno",

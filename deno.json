@@ -2,7 +2,7 @@
   "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json?source",
   "tasks": {
     "run": "deno run -A main.ts",
-    "docker": "docker run -it -v $(pwd):/workspaces/dotfiles -v $HOME/.cache/deno:/home/vscode/.cache/deno -u vscode -w /workspaces/dotfiles --rm mcr.microsoft.com/devcontainers/base:jammy zsh"
+    "docker": "docker run -it -v $(pwd):/workspaces/dotfiles-linux -v $HOME/.cache/deno:/home/vscode/.cache/deno -u vscode -w /workspaces/dotfiles-linux --rm --name=dotfiles-linux mcr.microsoft.com/devcontainers/base:jammy zsh"
   },
   "importMap": "./import_map.json",
   "fmt": {
