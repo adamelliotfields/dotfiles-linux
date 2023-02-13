@@ -8,6 +8,7 @@ export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
 
 # Deno
 # https://deno.land/manual/getting_started/setup_your_environment#environment-variables
+# https://deno.land/manual/tools/script_installer
 export DENO_INSTALL_ROOT="${HOME}/.deno"
 export DENO_DIR="${XDG_CACHE_HOME}/deno"
 

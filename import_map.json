@@ -1,7 +1,6 @@
 {
   "imports": {
-    "@octokit/types": "https://esm.sh/@octokit/types@8.0.0",
-    "common-tags": "https://esm.sh/common-tags@1.8.2",
-    "std/": "https://deno.land/std@0.170.0/"
+    "@adamelliotfields/dotfiles": "https://cdn.jsdelivr.net/gh/adamelliotfields/dotfiles@0.2.0/mod.ts",
+    "@adamelliotfields/dotfiles/utils": "https://cdn.jsdelivr.net/gh/adamelliotfields/dotfiles@0.2.0/utils/mod.ts"
   }
 }

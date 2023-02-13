@@ -2,19 +2,12 @@
 set -eu
 set -o pipefail
 
-# instructs dpkg and apt-get to not prompt for user input and use default values if necessary
-export DEBIAN_FRONTEND=noninteractive
-
-function echo_bold() {
-  echo -e "\e[1m$1\e[0m"
-}
-
 # check if we are running in a container
 function log_hostname() {
   if [ -f /.dockerenv ]; then
-    echo_bold "🐳 Running in container $(hostname)"
+    echo "🐳 Running in container $(hostname)"
   else
-    echo_bold "👨‍💻 Running on host $(hostname)"
+    echo "👨‍💻 Running on host $(hostname)"
   fi
 }
 
@@ -45,19 +38,18 @@ function install_deno() {
     deno completions bash | sudo tee "${bash_completion_dir}/deno" > /dev/null
     deno completions zsh | sudo tee "${zsh_site_functions_dir}/_deno" > /dev/null
 
-    echo "✅ Deno installed!"
+    echo "👍 Deno installed!"
   else
-    echo "✅ Deno already installed!"
+    echo "👍 Deno already installed!"
   fi
 }
 
 log_hostname
+
 install_deno
 
-deno run -A "$(dirname "$0")/main.ts"
+deno run -A main.ts
 
-echo_bold "🎉 Success!"
-
-unset DEBIAN_FRONTEND
+echo "🎉 Enjoy!"
 
 exit 0
