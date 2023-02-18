@@ -19,6 +19,7 @@ const APT_PACKAGES = ["git-extras", "ripgrep", "shellcheck", "vim"];
 const DEB_PACKAGES: [string, GitHubOptions | undefined][] = [
   ["cli/cli", { bin: "gh", arch: "linux_amd64" }],
   ["sharkdp/bat", undefined],
+  ["sharkdp/diskus", undefined],
   ["sharkdp/fd", undefined],
   ["dandavison/delta", undefined],
   ["peltoche/lsd", undefined],
